@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+
+    <link href="/css/main.css" rel="stylesheet">
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous">
+    <link href="/css/navbar.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- Nhúng phần navbar -->
+<div th:replace="~{navbar.html}"></div>
+
+<div id="banner" style="background-image: url('assets/banner.jpg');">
+    <div class="box-left">
+
+        <h2>
+            <span>THƯ VIỆN</span> <br> <span>ONLINE</span>
+        </h2>
+        <br>
+        <p style="color: white;">
+            Trong không gian vô tận của cửa hàng sách, <br> bạn sẽ được đắm
+            mình trong những trang sách đa dạng về thể loại, <br> từ những
+            tác phẩm kinh điển đến những cuốn sách mới nhất. <br> "Khám phá
+            thế giới tri thức và truyền cảm hứng cho tâm hồn<br> thông qua
+            những trang sách tuyệt vời tại cửa hàng sách chúng tôi."
+        </p>
+        <button>Mua ngay</button>
+    </div>
+    <div class="box-right">
+        <img src="assets/img_2.png" alt=""> <img src="assets/img_1.png"
+                                                 alt=""> <img src="assets/img_3.png" alt="">
+    </div>
+    <div class="to-bottom">
+        <a href=""> <img src="assets/to_bottom.png" alt="">
+        </a>
+    </div>
+</div>
+
+
+<!-- Sách bán chạy -->
+
+<div class="container">
+    <div id="wp-products1">
+        <h2 class="text-center">SÁCH BÁN CHẠY</h2>
+    </div>
+    <div class="row">
+        <!-- SẢN PHẨM 1 -->
+        <div class="col-md-3 mb-5 ">
+            <div class="card crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_1.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+							<span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span>
+                    </div>
+                    <div class="name">Bí Mật bị thời gian vùi lấp</div>
+                    <div class="author">Tác giả: Đồng Hoa</div>
+                    <div class="price">
+                        <a href=""></a>500.000 VNĐ
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SẢN PHẨM 2 -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_2.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+							<span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span>
+                    </div>
+                    <div class="name">Ái tình nơi đầu lưỡi</div>
+                    <div class="author">Tác giả: Jo Kyung Ran</div>
+                    <div class="price">
+                        <a href=""></a>200.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm 3  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_3.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+							<span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span>
+                    </div>
+                    <div class="name">Anh không muốn để em một mình</div>
+                    <div class="author">Tác giả: Diệp Lạc Vũ Tâm</div>
+                    <div class="price">
+                        <a href=""></a>250.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm 4  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_4.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+							<span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span>
+                    </div>
+                    <div class="name">Ngôi nhà nghìn hành lang</div>
+                    <div class="author">Tác giả: Diana Wynne Jones</div>
+                    <div class="price">
+                        <a href=""></a>700.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm 5  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_5.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+							<span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span>
+                    </div>
+                    <div class="name">The Sun, The Moon, The Stars</div>
+                    <div class="author">Tác giả: Junot Díaz</div>
+                    <div class="price">
+                        <a href=""></a>500.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm 6  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_6.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+							<span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span>
+                    </div>
+                    <div class="name">Dangerous Frames</div>
+                    <div class="author">Tác giả: Richard A. Muller</div>
+                    <div class="price">
+                        <a href=""></a>450.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Sản phẩm 7  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_7.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+							<span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span>
+                    </div>
+                    <div class="name">Kinh Thi Việt Nam</div>
+                    <div class="author">Tác giả: Nguyễn Bách Khoa</div>
+                    <div class="price">
+                        <a href=""></a>550.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm 8  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_8.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+							<span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span> <span> <img src="assets/star.png" alt="">
+							</span>
+                    </div>
+                    <div class="name">Hành trình về phương Đông</div>
+                    <div class="author">Tác giả: Baird T. Spalding</div>
+                    <div class="price">
+                        <a href=""></a>650.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-center mt-1 mb-1">
+            <a href="" class="btn btn-danger btn-md text-white">Tất cả</a>
+        </div>
+        <br>
+        <hr>
+    </div>
+</div>
+<!-- Sách mới -->
+<div class="container">
+    <div id="wp-products">
+        <h2 class="text-center">SÁCH MỚI</h2>
+    </div>
+    <div class="row">
+        <!-- SẢN PHẨM 1 -->
+        <div class="col-md-3 mb-5 ">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_1.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                    </div>
+                    <div class="name">Bí Mật bị thời gian vùi lấp</div>
+                    <div class="author">Tác giả: Đồng Hoa</div>
+                    <div class="price">
+                        <a href=""></a>500.000 VNĐ
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SẢN PHẨM 2 -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_2.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                    </div>
+                    <div class="name">Ái tình nơi đầu lưỡi</div>
+                    <div class="author">Tác giả: Jo Kyung Ran</div>
+                    <div class="price">
+                        <a href=""></a>200.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm 3  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_3.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                    </div>
+                    <div class="name">Anh không muốn để em một mình</div>
+                    <div class="author">Tác giả: Diệp Lạc Vũ Tâm</div>
+                    <div class="price">
+                        <a href=""></a>250.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm 4  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_4.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                    </div>
+                    <div class="name">Ngôi nhà nghìn hành lang</div>
+                    <div class="author">Tác giả: Diana Wynne Jones</div>
+                    <div class="price">
+                        <a href=""></a>700.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm 5  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_5.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                    </div>
+                    <div class="name">The Sun, The Moon, The Stars</div>
+                    <div class="author">Tác giả: Junot Díaz</div>
+                    <div class="price">
+                        <a href=""></a>500.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm 6  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_6.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                    </div>
+                    <div class="name">Dangerous Frames</div>
+                    <div class="author">Tác giả: Richard A. Muller</div>
+                    <div class="price">
+                        <a href=""></a>450.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Sản phẩm 7  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_7.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                    </div>
+                    <div class="name">Kinh Thi Việt Nam</div>
+                    <div class="author">Tác giả: Nguyễn Bách Khoa</div>
+                    <div class="price">
+                        <a href=""></a>550.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm 8  -->
+        <div class="col-md-3 mb-4">
+            <div class="card  crd-ho">
+                <div class="card-body text-center">
+                    <img src="assets/product_8.jpg" alt=""
+                         style="width: 150px; height: 200px;" class="img-thumblin">
+                    <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                    </div>
+                    <div class="name">Hành trình về phương Đông</div>
+                    <div class="author">Tác giả: Baird T. Spalding</div>
+                    <div class="price">
+                        <a href=""></a>650.000 VNĐ
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="btn btn-danger btn-sm d-inline-block"
+                               style="width: 66px; text-align: center;">Mua</a> <a href=""
+                                                                                   class="btn btn-success btn-sm d-inline-block">Chi
+                            tiết</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="text-center mt-1 mb-1">
+            <a href="" class="btn btn-danger btn-md text-white">Tất cả</a>
+        </div>
+        <br>
+        <hr>
+    </div>
+</div>
+<!--End Sách mới -->
+
+
+<div id="saleoff" style="background-image: url('assets/off.jpg');">
+    <div class="box-left">
+        <h1>
+            <span>GIẢM GIÁ LÊN ĐẾN</span> <span>30%</span>
+        </h1>
+    </div>
+    <div class="box-right"></div>
+</div>
+
+<div id="comment">
+    <h2>NHẬN XÉT CỦA KHÁCH HÀNG</h2>
+    <div id="comment-body">
+        <div class="prev">
+            <a href="#"> <img src="assets/prev.png" alt="">
+            </a>
+        </div>
+        <ul id="list-comment">
+            <li class="item">
+                <div class="avatar">
+                    <img src="assets/avatar_2.png" alt="">
+
+                </div>
+                <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                </div>
+                <div class="name">Vũ Hoàng Tiến</div>
+
+                <div class="text">
+                    <p>"Tôi rất thích cách thức mua sắm sách trực tuyến tại cửa
+                        hàng của bạn. Giao diện trang web được thiết kế rất tinh tế và
+                        dễ sử dụng, giúp tôi tìm kiếm những quyển sách mình cần một
+                        cách nhanh chóng và thuận tiện."</p>
+                </div>
+            </li>
+            <li class="item">
+                <div class="avatar">
+                    <img src="assets/avatar_1.png" alt="">
+
+                </div>
+                <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                </div>
+                <div class="name">Trần Thanh Thế</div>
+
+                <div class="text">
+                    <p>
+                        "Giá sách ở cửa hàng này rất hợp lý. Tôi có thể mua được nhiều
+                        sách <br>mà không phải lo lắng về giá cả."
+                    </p>
+                </div>
+            </li>
+            <li class="item">
+                <div class="avatar">
+                    <img src="assets/avatar_3.png" alt="">
+
+                </div>
+                <div class="stars">
+									<span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span> <span> <img src="assets/star.png" alt="">
+									</span>
+                </div>
+                <div class="name">Ngô Thanh Vân</div>
+
+                <div class="text">
+                    <p>"Tôi rất thích cửa hàng sách này vì sự đa dạng và phong
+                        phú của các loại sách mà họ cung cấp. Tôi đã tìm thấy những
+                        quyển sách mà tôi muốn đọc và những quyển sách mới lạ mà tôi
+                        chưa từng nghe qua trước đây."</p>
+                </div>
+            </li>
+        </ul>
+        <div class="next">
+            <a href="#"> <img src="assets/next.png" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Nhúng phần navbar -->
+<div th:replace="~{footer.html}"></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const next = document.querySelector('.next');
+        const prev = document.querySelector('.prev');
+        const comment = document.querySelector('#list-comment');
+        const commentItem = document.querySelectorAll('#list-comment .item');
+        var translateY = 0;
+        var count = commentItem.length;
+
+        next.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (count == 1) {
+                return false;
+            }
+            translateY += -400;
+            comment.style.transform = `translateY(${translateY}px)`;
+            count--;
+        });
+
+        prev.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (count == 3) {
+                return false;
+            }
+            translateY += 400;
+            comment.style.transform = `translateY(${translateY}px)`;
+            count++;
+        });
+
+        var featuredBookLink = document.querySelector('.nav-link[href="#"]');
+        var newBookLink = document.querySelector('.nav-link[href="#"]');
+        var featuredBookSection = document.getElementById('wp-products1');
+        var newBookSection = document.getElementById('wp-products');
+
+        featuredBookLink.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            // Cuộn trang web đến phần sách bán chạy
+            featuredBookSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        newBookLink.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            // Cuộn trang web đến phần sách mới
+            newBookSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+
+</script>
+
+
+
+</body>
+</html>

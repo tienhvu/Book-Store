@@ -1,0 +1,86 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,500&family=Schibsted+Grotesk&display=swap')
+	;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+}
+
+
+
+#wrapper {
+    display: flex;
+    flex-direction: column; /* Thay đổi hướng của flex thành dọc */
+    justify-content: flex-start; /* Canh chỉnh các phần tử từ trên xuống dưới */
+    align-items: center;
+    min-height: 90vh;
+    margin-top: 100px;
+
+}
+
+#register {
+	border: 1px solid #dadce0;
+	border-radius: 5px;
+	padding: 30px;
+}
+
+h2 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#wrapper input {
+	height: 45px;
+	width: 300px;
+	outline: none;
+	border: 1px solid #dadce0;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: inherit;
+	color: #202124;
+	transition: all 0.2s ease-in-out;
+}
+
+label {
+	position: absolute;
+	padding: 0px 5px;
+	left: 5px;
+	top: 50%;
+	pointer-events: none;
+	transform: translateY(-50%);
+	background: #fff;
+	transition: all 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+	border: 2px solid #1a73e8;
+}
+
+.form-group input:focus+label, .form-group input:valid+label {
+	top: 0px;
+	font-size: 13px;
+	font-weight: 500;
+	color: #1a73e8;
+}
+
+input#btn-register {
+	background: #1a73e8;
+	color: #fff;
+	cursor: pointer;
+}
+
+input#btn-register:hover {
+	opacity: 0.85;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+
+    <link href="/css/navbar.css" rel="stylesheet">
+    <link href="/css/login.css" rel="stylesheet">
+    <link href="/css/adminHome.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="header nav-item">
+                    <a class="nav-link" href="/user/home" style="color: black;"><img src="/assets/home.png">Trang
+                        chủ</a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <form class="input-group">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm" id="keyword" size="15"/>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success" type="submit">Tất cả</button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <button class="nav-link btn btn-light" onclick="confirmLogout()">
+                        <img src="/assets/logout.png">
+                        Đăng xuất
+                    </button>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<h1>Tất cả đơn hàng</h1>
+<!-- Kiểm tra và hiển thị thông báo thành công -->
+<div th:if="${successMessage}" class="alert alert-success">
+    <p th:text="${successMessage}"></p>
+</div>
+<div th:if="${message}" class="alert alert-success">
+    <p th:text="${message}"></p>
+</div>
+<table class="table">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">Id đơn đặt hàng</th>
+        <th scope="col">Id sách</th>
+        <th scope="col">Tiêu đề</th>
+        <th scope="col">Tác giả</th>
+        <th scope="col">Số lượng</th>
+        <th scope="col">Tổng giá</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody id="book-list">
+    <tr th:each="order : ${orders}">
+        <td th:text="${order.id}"></td>
+        <td th:text="${order.bookId}"></td>
+        <td th:text="${order.bookName}"></td>
+        <td th:text="${order.author}"></td>
+        <td th:text="${order.quantity}"></td>
+        <td th:text="${order.totalPrice}"></td>
+
+        <td>
+            <button class="btn btn-primary" th:data-bookid="${order.bookId}" onclick="showBookDetail(event)">
+                Chi tiết
+            </button>
+            <button class="btn btn-danger"
+                    th:attr="data-url=@{|/order/deleteOrder/${order.id}|}"
+                    onclick="return confirmDelete(event);">
+                Xóa
+            </button>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+</table>
+
+<script th:inline="javascript">
+    $(document).ready(function () {
+        // Lưu trữ danh sách ban đầu
+        var originalBooks = $("#book-list").html();
+
+        // Gán sự kiện oninput cho thanh tìm kiếm
+        $("#keyword").on("input", function () {
+            var keyword = $(this).val().trim().toLowerCase();
+            var bookList = $("#book-list");
+
+            if (keyword.length > 0) {
+                // Lọc danh sách sách theo keyword
+                bookList.find("tr").each(function () {
+                    var bookTitle = $(this).find("td:nth-child(3)").text().toLowerCase();
+                    var bookAuthor = $(this).find("td:nth-child(4)").text().toLowerCase();
+
+                    if (bookTitle.includes(keyword) || bookAuthor.includes(keyword)) {
+                        $(this).show(); // Hiển thị sách nếu có keyword
+                    } else {
+                        $(this).hide(); // Ẩn sách nếu không có keyword
+                    }
+                });
+            } else {
+                // Khôi phục lại danh sách ban đầu
+                bookList.html(originalBooks);
+            }
+        });
+    });
+
+    function confirmDelete(event) {
+        var confirmation = confirm("Bạn có chắc chắn muốn xóa không?");
+        if (confirmation) {
+            var deleteUrl = event.target.getAttribute('data-url');
+            window.location.href = deleteUrl; // Chuyển hướng tới URL xóa sách
+        }
+        return false; // Ngăn chặn sự kiện mặc định của nút xóa
+    }
+
+    function confirmLogout() {
+        var confirmLogout = confirm("Bạn có chắc chắn muốn đăng xuất?");
+
+        if (confirmLogout) {
+        window.location.href = "/logout"; // Chuyển hướng đến /adminLogout
+    } else {
+        // Không làm gì
+    }
+
+    }
+function showBookDetail(event) {
+  var bookId = event.currentTarget.dataset.bookid;
+  window.location.href = "/order/detail/" + bookId;
+}
+</script>
+</body>
+
+</html>
